@@ -32,17 +32,12 @@
   &__name {
     display: block;
     margin-bottom: 15px;
-    //transform: scale(0);
-    // transform: translateX(-200px);
     opacity: 0;
     font-size: clamp(40px, 11vw, 110px);
   }
 
   &__occupation {
     display: block;
-
-    //transform: scale(0);
-    // transform: translateX(-200px);
     opacity: 0;
     font-size: clamp(25px, 7vw, 60px);
     line-height: 1.2;
@@ -50,9 +45,6 @@
 
   &__location {
     display: block;
-
-    //transform: scale(0);
-    // transform: translateX(-200px);
     opacity: 0;
     font-size: clamp(20px, 6vw, 50px);
   }
@@ -60,24 +52,6 @@
   &__button-box {
     opacity: 0;
   }
-
-  // &__scroll {
-  //   position: absolute;
-  //   bottom: -20px;
-  //   left: calc(50% - 34px);
-  //   width: 68px;
-  //   opacity: 0;
-  //   font-size: 12px;
-
-  //   &::after {
-  //     content: "";
-  //     display: block;
-  //     width: 2px;
-  //     height: 40px;
-  //     margin: 10px auto 0;
-  //     background: var(--primary-color);
-  //   }
-  // }
 
   @media (min-width:$tb) {
     height: calc(100vh - 60px - 24px);
@@ -90,20 +64,20 @@
   display: block;
   position: absolute;
   z-index: 0;
-  mask: url("/img/circle.svg") 50% 50% / contain no-repeat;
-  mask-size: cover;
   width: 200px;
   height: 200px;
+  mask: url("/img/circle.svg") 50% 50% / contain no-repeat;
+  mask-size: cover;
 
   &.--circle-1 {
     top: -100px;
-    right: -70px;
+    right: -100px;
     background: var(--primary);
   }
 
   &.--circle-2 {
     bottom: -100px;
-    left: -70px;
+    left: -100px;
     background: var(--primary);
   }
 
@@ -147,15 +121,17 @@
 
     &.--circle-1 {
       top: -200px;
-      right: -140px;
+      right: -200px;
     }
 
     &.--circle-2 {
       bottom: -200px;
-      left: -140px;
+      left: -200px;
     }
 
-    &.--circle-3, &.--circle-4, &.--circle-5 {
+    &.--circle-3,
+    &.--circle-4,
+    &.--circle-5 {
       width: 180px;
       height: 180px;
     }

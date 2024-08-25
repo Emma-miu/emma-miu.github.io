@@ -470,19 +470,19 @@ img {
   display: block;
   position: absolute;
   z-index: 0;
-  mask: url("/img/circle.svg") 50% 50%/contain no-repeat;
-  mask-size: cover;
   width: 200px;
   height: 200px;
+  mask: url("/img/circle.svg") 50% 50%/contain no-repeat;
+  mask-size: cover;
 }
 .mv-circle.--circle-1 {
   top: -100px;
-  right: -70px;
+  right: -100px;
   background: var(--primary);
 }
 .mv-circle.--circle-2 {
   bottom: -100px;
-  left: -70px;
+  left: -100px;
   background: var(--primary);
 }
 .mv-circle.--circle-3 {
@@ -521,11 +521,11 @@ img {
   }
   .mv-circle.--circle-1 {
     top: -200px;
-    right: -140px;
+    right: -200px;
   }
   .mv-circle.--circle-2 {
     bottom: -200px;
-    left: -140px;
+    left: -200px;
   }
   .mv-circle.--circle-3, .mv-circle.--circle-4, .mv-circle.--circle-5 {
     width: 180px;
@@ -721,8 +721,6 @@ img {
   margin: 0 0 0 calc(var(--padding) * -1);
   padding: 30px var(--padding);
   background-color: var(--primary-bg);
-  opacity: 0;
-  transform: translateY(-30px);
 }
 .ly-skill:first-of-type {
   margin-bottom: 30px;
@@ -811,6 +809,10 @@ img {
   }
 }
 @media (min-width: 1280px) {
+  .ly-skill {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
   .ly-skill:first-of-type {
     margin-bottom: 0;
   }

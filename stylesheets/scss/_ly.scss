@@ -27,8 +27,8 @@
     .ly-wrapper {
       position: relative;
       padding: 20px 10px;
-      background-color: $white;
       overflow: hidden;
+      background-color: $white;
     }
   }
 }
@@ -155,8 +155,6 @@
   margin: 0 0 0 calc(var(--padding) * -1);
   padding: 30px var(--padding);
   background-color: var(--primary-bg);
-  opacity: 0;
-  transform: translateY(-30px);
 
   &:first-of-type {
     margin-bottom: 30px;
@@ -259,6 +257,8 @@
 
 @media (min-width: $pc) {
   .ly-skill {
+    transform: translateY(-30px);
+    opacity: 0;
 
     &:first-of-type {
       margin-bottom: 0;
