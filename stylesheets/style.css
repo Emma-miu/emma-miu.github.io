@@ -617,8 +617,8 @@ img {
 .ly-box--contact .ly-wrapper {
   position: relative;
   padding: 20px 10px;
-  background-color: #fff;
   overflow: hidden;
+  background-color: #fff;
 }
 
 @media (min-width: 768px) {
