@@ -1,0 +1,57 @@
+/* ------------------------------
+  btn.scss button
+------------------------------ */
+
+@mixin btn() {
+  @include montserrat;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  transition: $trans;
+  border-radius: $radius;
+  background: var(--primary);
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 5px 10px 20px -10px var(--primary);
+  }
+}
+
+.btn-primary {
+  @include btn;
+
+  &--download {
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-left: 15px;
+      transform: translateY(20%);
+      background: url("/img/download.svg") 50% 50% / contain no-repeat;
+    }
+  }
+}
+
+.btn-secondary {
+  @include btn;
+  padding: 0.5rem 1rem;
+  background: var(--secondary);
+
+  &:hover {
+    box-shadow: 5px 10px 20px -10px var(--secondary);
+  }
+
+  &--blank {
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-left: 10px;
+      transform: translateY(1px);
+      background: url("/img/blank.svg") 50% 50% / contain no-repeat;
+    }
+  }
+}

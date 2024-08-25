@@ -1,0 +1,25 @@
+@mixin abril {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin lora {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin h3 {
+  @include abril;
+  font-size: clamp(20px, 4vw, 40px);
+  margin-bottom: 15px;
+}

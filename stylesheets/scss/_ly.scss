@@ -1,0 +1,503 @@
+/* ------------------------------
+  ly.scss
+------------------------------ */
+
+.ly-box {
+  padding: 44px var(--padding);
+  background-color: var(--box-bg);
+
+  &:not(:last-of-type) {
+    border-bottom: 2px solid var(--text-color);
+  }
+
+  &--secondary {
+    background-color: var(--secondary-bg);
+
+    .title {
+      &::before {
+        background-color: var(--secondary);
+      }
+    }
+  }
+
+  &--contact {
+    padding: 20px var(--padding);
+    background-color: var(--primary);
+
+    .ly-wrapper {
+      position: relative;
+      padding: 20px 10px;
+      background-color: $white;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (min-width:$tb) {
+  .ly-box {
+    padding: var(--padding);
+
+    &--contact {
+      .ly-wrapper {
+        padding: var(--padding);
+      }
+    }
+  }
+}
+
+
+.ly-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.ly-flex {
+  &:not(:last-of-type) {
+    margin-bottom: 44px;
+  }
+}
+
+@media (min-width: $pc) {
+  .ly-flex {
+    display: flex;
+    gap: 60px;
+
+    &--center {
+      align-items: center;
+    }
+  }
+}
+
+.ly-content {
+  padding: 0 10px 36px;
+
+  p {
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: $pc) {
+  .ly-content {
+    padding: 50px;
+    border-radius: 30px;
+    background-color: $white;
+  }
+}
+
+.ly-profile {
+  position: relative;
+  width: 200px;
+  min-width: 200px;
+  height: 200px;
+  margin: 0 auto;
+
+  img {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__circle {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: calc(50% - 112.5px);
+    left: calc(50% - 112.5px);
+    width: 225px;
+    height: 225px;
+    background-color: var(--secondary);
+    mask: url("/img/circle.svg") 50% 50% / contain no-repeat;
+    mask-size: cover;
+  }
+}
+
+@media (min-width:$pc-big) {
+  .ly-profile {
+    min-width: 300px;
+    height: 300px;
+
+    &__circle {
+      top: calc(50% - 162.5px);
+      left: calc(50% - 162.5px);
+      width: 325px;
+      height: 325px;
+    }
+  }
+}
+
+.ly-highlight {
+  text-align: center;
+
+  &__text {
+    @include abril;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width:$pc) {
+  .ly-highlight {
+
+    &__text {
+      font-size: 30px;
+    }
+  }
+}
+
+
+.ly-skill {
+  width: calc(100% + var(--padding) * 2);
+  margin: 0 0 0 calc(var(--padding) * -1);
+  padding: 30px var(--padding);
+  background-color: var(--primary-bg);
+  opacity: 0;
+  transform: translateY(-30px);
+
+  &:first-of-type {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    @include h3;
+    text-align: center;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 10px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      min-width: 15px;
+      height: 2px;
+      margin-top: 11px;
+      background-color: var(--primary);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__subtitle {
+    @include abril;
+    margin-bottom: 10px;
+    font-size: clamp(18px, 4vw, 28px);
+  }
+
+  &__tool {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  &__tool-item {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--primary);
+    font-size: 0;
+    mask-size: cover;
+
+    &.--xd {
+      mask: url("/img/tools/xd.svg") 50% 50% / contain no-repeat;
+    }
+
+    &.--figma {
+      mask: url("/img/tools/figma.svg") 50% 50% / contain no-repeat;
+    }
+
+    &.--photoshop {
+      mask: url("/img/tools/photoshop.svg") 50% 50% / contain no-repeat;
+    }
+
+    &.--illustrator {
+      mask: url("/img/tools/illustrator.svg") 50% 50% / contain no-repeat;
+    }
+
+    &.--html {
+      mask: url("/img/tools/html.svg") 50% 50% / contain no-repeat;
+    }
+
+    &.--css {
+      mask: url("/img/tools/css.svg") 50% 50% / contain no-repeat;
+    }
+
+    &.--javascript {
+      mask: url("/img/tools/javascript.svg") 50% 50% / contain no-repeat;
+    }
+
+    &.--wordpress {
+      mask: url("/img/tools/wordpress.svg") 50% 50% / contain no-repeat;
+    }
+  }
+}
+
+@media (min-width: $tb) {
+  .ly-skill {
+    width: 100%;
+    margin: 0;
+    border-radius: 30px;
+
+    &:first-of-type {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (min-width: $pc) {
+  .ly-skill {
+
+    &:first-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.ly-work {
+  display: block;
+  margin-bottom: 50px;
+
+  &__title {
+    @include h3;
+  }
+
+  &__img {
+    width: calc(100% + var(--padding) * 2);
+    margin: 0 0 10px calc(var(--padding) * -1);
+    overflow: hidden;
+    filter: grayscale(1);
+    aspect-ratio: 3 / 2;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__tools {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 2px;
+      margin-right: 10px;
+      background-color: var(--secondary);
+    }
+  }
+}
+
+@media (min-width: $tb) {
+  .ly-work {
+    margin-bottom: 80px;
+
+    &__img {
+      width: 100%;
+      min-width: 400px;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (min-width:$pc) {
+  .ly-work {
+    margin-bottom: 100px;
+    transition: $trans;
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+
+      &--reverse {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &__img {
+      margin-bottom: 0;
+    }
+
+    &__content {
+      min-width: 650px;
+      max-width: 750px;
+    }
+
+    &__text {
+      padding: 30px;
+      border-radius: 30px;
+      background-color: $white;
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    &__tools {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      .ly-work__img {
+        filter: grayscale(0);
+      }
+    }
+
+  }
+}
+
+@media (min-width:$pc-big) {
+  .ly-work {
+    &__wrapper {
+      gap: 90px;
+    }
+  }
+}
+
+.ly-work-mini {
+  .ly-work__title {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    width: calc(100% + var(--padding) * 2);
+    margin: 0 0 0 calc(var(--padding) * -1);
+    padding: 30px var(--padding);
+    background-color: $white;
+
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (min-width:$tb) {
+  .ly-work-mini {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    &__item {
+      flex-grow: 1;
+      width: 250px;
+      margin: 0;
+      padding: 30px;
+      border-radius: 30px;
+
+      &:not(:last-of-type) {
+        margin-bottom: 0;
+      }
+    }
+
+    .ly-work__tools {
+      align-items: flex-start;
+      margin-bottom: 15px;
+
+      &::before {
+        margin-top: 11px;
+      }
+    }
+  }
+}
+
+@media (min-width:$pc) {
+  .ly-work-mini {
+    .ly-work__text {
+      padding: 0;
+    }
+
+    .ly-work__info {
+      display: block;
+    }
+  }
+}
+
+
+.ly-contact {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 30px;
+
+  p {
+    margin-bottom: 30px;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+
+  &__button-box {
+    text-align: center;
+
+    .btn-primary:first-of-type {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.ly-contact-circle {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  right: -50px;
+  bottom: -80px;
+  width: 250px;
+  height: 250px;
+  background-color: var(--primary);
+  mask: url("/img/circle.svg") 50% 50% / contain no-repeat;
+  mask-size: cover;
+}
+
+@media (min-width:$tb) {
+  .ly-contact-circle {
+    right: -80px;
+    bottom: -130px;
+  }
+}
+
+@media (min-width:$pc) {
+  .ly-contact {
+    p {
+      margin-bottom: 40px;
+    }
+
+    &__button-box {
+      text-align: left;
+
+      .btn-primary:first-of-type {
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+
+  .ly-contact-circle {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+
+

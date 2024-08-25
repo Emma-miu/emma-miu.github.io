@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLV6SV2SYB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XLV6SV2SYB');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi, i'm Emma a Web Designer / Web Developer currently in Tokyo</title>
+  <meta name="description" content="Portfolio website by Emma. I'm a Web Designer / Web Developer based in Tokyo. "/>
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#9C658E" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#976389" />
+
+  <!-- CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./stylesheets/style.css"/>
+
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="./js/index.js"></script>
+</head>
+
+<body>
+  <div class="outer-container">
+    <!-- #### Header start #### -->
+    <header class="header">
+      <div class="header__wrapper js-header">
+        <p class="header__name">Emma.F</p>
+        <nav>
+          <div class="header__button js-header-trigger">
+            <span class="header__icon js-header-icon"></span>
+          </div>
+          <div class="header-menu js-header-menu is-close">
+            <ul class="header-menu-list">
+              <li class="header-menu-list__item"><a class="js-header-trigger js-link" href="#about">1. About me</a></li>
+              <li class="header-menu-list__item"><a class="js-header-trigger js-link" href="#skill">2. Skill Set</a></li>
+              <li class="header-menu-list__item"><a class="js-header-trigger js-link" href="#work">3. Work</a></li>
+              <li class="header-menu-list__item"><a class="js-header-trigger js-link" href="#contact">4. Contact</a></li>
+              <li class="header-menu-list__item --sp">
+                <ul class="sns-box">
+                  <li class="sns-box__item"><a href="http://www.google.com" target="_blank" rel="noopener noreferrer"></a></li>
+                  <li class="sns-box__item"><a href="http://www.google.com" target="_blank" class="--git" rel="noopener noreferrer"></a></li>
+                  <li class="sns-box__item"><a href="http://www.google.com" target="_blank" class="--code" rel="noopener noreferrer"></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+        </nav>
+      </div>
+    </header>
+    <!-- #### Header end #### -->
+
+    <!-- #### Main Visual start #### -->
+    <div class="mv">
+      <div class="mv__wrapper">
+        <h1>
+          <span class="mv__name js-title">Hi, I'm Emma F.</span>
+          <span class="mv__occupation js-title">a Web Designer / Web Developer</span>
+          <span class="mv__location js-title">currently living in Tokyo</span>
+        </h1>
+        <div class="mv__button-box js-button">
+          <a href="#contact" class="btn-primary js-link">SAY HELLO</a>
+        </div>
+        <!-- <div class="mv__scroll js-scroll">
+          <span>scroll down</span>
+        </div> -->
+      </div>
+      <div class="mv-circle --circle-1 js-rotate"></div>
+      <div class="mv-circle --circle-2 js-rotate"></div>
+      <div class="mv-circle --circle-3 js-circle js-rotate"></div>
+      <div class="mv-circle --circle-4 js-circle js-rotate"></div>
+      <div class="mv-circle --circle-5 js-circle js-rotate"></div>
+      <div class="mv-circle --circle-6 js-circle js-rotate"></div>
+    </div>
+    <!-- #### Main Visual start #### -->
+
+    <!-- #### Main start #### -->
+    <main>
+
+      <!-- About start -->
+      <div id="about" class="ly-box ly-box--secondary">
+        <div class="ly-wrapper">
+          <h2 class="title">1. About</h2>
+          <div class="ly-flex ly-flex--center">
+            <div class="ly-content">
+              <p>I’m a French designer who has been living in Japan since 2018. After mastering Japanese and English, and diving deep into the world of digital marketing, I discovered my true passion in coding and web design. Today, I work as a web designer for a Japanese company, crafting intuitive and engaging digital experiences.</p>
+              <p>With an N2 level certification in the Japanese Language Proficiency Test, I conduct all my work in Japanese. Additionally, I am fluent in both French and English, which allows me to navigate multicultural environments with ease.</p>
+              <p>I strongly believe that it's never too late to learn something new. Whether it's a new programming language or a fresh design trend, I am committed to continuous learning and growth in both my professional and personal life.</p>
+              <p>If you're looking for a web designer who blends creativity with technical expertise, <a class="js-link" href="#contact">let's connect!</a></p>
+            </div>
+            <div class="ly-profile">
+              <img src="/img/profile.png" alt="black and white circle profile picture">
+              <div class="ly-profile__circle js-profile js-rotate"></div>
+            </div>
+          </div>
+          <div class="ly-highlight">
+            <p class="ly-highlight__text">Want to know more about my experiences ?</p>
+            <a href="https://drive.google.com/uc?export=download&id=1EeiobD4DO9lRFlAwcMGrY2sDI_1gBjmP" class="btn-primary btn-primary--download">GET MY RESUME</a>
+          </div>
+        </div>
+      </div>
+      <!-- About end -->
+
+
+      <!-- Skill start -->
+      <div id="skill" class="ly-box js-skill-card">
+        <div class="ly-wrapper">
+          <h2 class="title">2. Skill Set</h2>
+          <div class="ly-flex">
+            <div class="ly-skill js-skill-item">
+              <h3 class="ly-skill__title">Web Designer</h3>
+              <ul class="ly-skill__list">
+                <li class="ly-skill__item">Create wireframes and prototypes to ensure usability and map out user journeys after creating relevant personas</li>
+                <li class="ly-skill__item">Develop visually appealing and user-friendly designs that align with the client's brand identity, for both mobile and desktop platforms.</li>
+                <li class="ly-skill__item">Design engaging banners and promotional materials for events and specific campaigns</li>
+              </ul>
+              <h4 class="ly-skill__subtitle">Tools</h4>
+              <ul class="ly-skill__tool">
+                <li class="ly-skill__tool-item --xd">Adobe XD</li>
+                <li class="ly-skill__tool-item --figma">Figma</li>
+                <li class="ly-skill__tool-item --photoshop">Adobe Photoshop</li>
+                <li class="ly-skill__tool-item --illustrator">Adobe Illustrator</li>
+              </ul>
+            </div>
+
+            <div class="ly-skill js-skill-item">
+              <h3 class="ly-skill__title">Web Developer</h3>
+              <ul class="ly-skill__list">
+                <li class="ly-skill__item">Develop fully responsive websites from scratch using HTML, CSS, and JavaScript. </li>
+                <li class="ly-skill__item">Build WordPress websites with custom or premium themes, adhering to accessibility guidelines. </li>
+                <li class="ly-skill__item">Collaborate with engineers for site testing and deployment. </li>
+              </ul>
+              <h4 class="ly-skill__subtitle">Tools</h4>
+              <ul class="ly-skill__tool">
+                <li class="ly-skill__tool-item --html">html 5</li>
+                <li class="ly-skill__tool-item --css">css 3 / sass</li>
+                <li class="ly-skill__tool-item --javascript">Javascript / Jquery</li>
+                <li class="ly-skill__tool-item --wordpress">Worpress</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Skill end -->
+
+      <!-- Work start -->
+      <div id="work" class="ly-box ly-box--secondary">
+        <div class="ly-wrapper">
+          <div class="ly-work-wrapper">
+            <h2 class="title">3. Work</h2>
+            <a href="https://emma-miu.github.io/company-website/" class="ly-work" target="_blank">
+              <h3 class="ly-work__title --tb">Project 1 : Company Website</h3>
+              <div class="ly-work__wrapper ly-work__wrapper--reverse">
+                <div class="ly-work__img">
+                  <img src="/img/work/project1.jpg" alt="">
+                </div>
+                <div class="ly-work__content">
+                  <h3 class="ly-work__title --pc">Project 1 : Company Website</h3>
+                  <div class="ly-work__text">
+                    <p>This project is a very simple project for a fictive japanese company. It's a static corporate website with the company main information on the top page. Recruitment is major factor for this company, so a separated page was created to explain their recruitment process in details. </p>
+                  </div>
+                  <div class="ly-work__info">
+                    <p class="ly-work__tools">Javascript・HTML・SASS</p>
+                    <p class="btn-secondary btn-secondary--blank">DEMO</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://emma-miu.github.io/keeper-app/" class="ly-work" target="_blank">
+              <h3 class="ly-work__title --tb">Project 2 : Keeper App</h3>
+              <div class="ly-work__wrapper">
+                <div class="ly-work__img">
+                  <img src="/img/work/project2.jpg" alt="">
+                </div>
+                <div class="ly-work__content">
+                  <h3 class="ly-work__title --pc">Project 2 : Keeper App</h3>
+                  <div class="ly-work__text">
+                    <p>I am constantly trying to learn new programming language. I got React basis from The Complete 2024 Web Development Bootcamp by Angela Yu. This project is the final project created during the course. Course that gave me insight using React Components, inline styling, props, hooks, useState...</p>
+                  </div>
+                  <div class="ly-work__info">
+                    <p class="ly-work__tools">Javascript・REACT</p>
+                    <p class="btn-secondary btn-secondary--blank">DEMO</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+
+          <!-- <div class="ly-work-mini">
+            <h3 class="ly-work__title">Mini-projects</h3>
+            <ul class="ly-work-mini__list">
+              <li class="ly-work-mini__item">
+                <a class="ly-work-mini__box" href="http://www.google.com" target="_blank">
+                  <div class="ly-work__text">
+                    <p>I have been living in Japan since 2018. After studying Japanese/English as well as digital project managing, I went to coding and web design. 
+                      I have been living in Japan since 2018. After studying Japanese/English as well as digital project managing, I went to coding and web design. </p>
+                  </div>
+                  <div class="ly-work__info">
+                    <p class="ly-work__tools">Javascript・HTML・SASS</p>
+                    <p class="btn-secondary btn-secondary--blank">DEMO</p>
+                  </div>
+                </a>
+              </li>
+              <li class="ly-work-mini__item">
+                <a class="ly-work-mini__box" href="http://www.google.com" target="_blank">
+                  <div class="ly-work__text">
+                    <p>I have been living in Japan since 2018. After studying Japanese/English as well as digital project managing </p>
+                  </div>
+                  <div class="ly-work__info">
+                    <p class="ly-work__tools">Javascript・HTML・SASS</p>
+                    <p class="btn-secondary btn-secondary--blank">DEMO</p>
+                  </div>
+                </a>
+              </li>
+              <li class="ly-work-mini__item">
+                <a class="ly-work-mini__box" href="http://www.google.com" target="_blank">
+                  <div class="ly-work__text">
+                    <p>I have been living in Japan since 2018. After studying Japanese/English as well as digital project managing, I went to coding and web design. 
+                      I have been living in Japan since 2018. After studying Japanese/English as well as digital project managing, I went to coding and web design. </p>
+                  </div>
+                  <div class="ly-work__info">
+                    <p class="ly-work__tools">Javascript・HTML・SASS</p>
+                    <p class="btn-secondary btn-secondary--blank">DEMO</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+      <!-- Work end -->
+
+      <!-- Contact start -->
+       <div id="contact" class="ly-box ly-box--contact">
+        <div class="ly-wrapper">
+          <h2 class="title">4. Contact</h2>
+
+          <div class="ly-contact">
+            <p>Interested in collaborating or want to learn more about my work? Feel free to download my resume or send me an email. You can also contact me via <a href="https://www.linkedin.com/in/emmafradin/" target="_blank" rel="noopener noreferrer">Linkedin</a>. I’d love to hear from you!</p>
+              <div class="ly-contact__button-box">
+                <a class="btn-primary" href="mailto:emma.fradin@gmail.com">EMAIL ME</a>
+                <a class="btn-primary btn-primary--download" href="">GET MY RESUME</a>
+              </div>
+          </div>
+
+          <div class="ly-contact-circle js-rotate"></div>
+        </div>
+       </div>
+      <!-- Contact end-->
+
+    </main>
+    <!-- #### Main end #### -->
+
+    <!-- ####  Footer start #### -->
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <!-- <p>Template by Emma F.</p> -->
+        <ul class="sns-box sns-box--footer">
+          <li class="sns-box__item"><a href="https://www.linkedin.com/in/emmafradin/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+          <li class="sns-box__item"><a href="http://" target="_blank" class="--git" rel="noopener noreferrer">Github</a></li>
+          <li class="sns-box__item"><a href="http://" target="_blank" class="--code" rel="noopener noreferrer">Codepen</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- ####  Footer end #### -->
+  </div>
+</body>
+</html>

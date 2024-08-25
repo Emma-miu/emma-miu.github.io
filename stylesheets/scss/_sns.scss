@@ -1,0 +1,42 @@
+/* ------------------------------
+  sns.scss
+------------------------------ */
+
+.sns-box {
+  $t: &;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  &__item {
+
+    a {
+      display: block;
+      width: 30px;
+      height: 30px;
+      mask: url("/img/sns/linkedin.svg") 50% 50% / contain no-repeat;
+      mask-size: cover;
+      background-color: var(--bg-color);
+      font-size: 0;
+
+      &.--git {
+        mask: url("/img/sns/git.svg") 50% 50% / contain no-repeat;
+      }
+
+      &.--code {
+        mask: url("/img/sns/code.svg") 50% 50% / contain no-repeat;
+      }
+    }
+  }
+
+  &--footer {
+    #{$t}__item {
+      a {
+        width: 30px;
+        height: 30px;
+        background-color: var(--bg-color);
+      }
+    }
+  }
+}
