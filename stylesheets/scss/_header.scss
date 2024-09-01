@@ -181,7 +181,7 @@
         }
 
         &:hover {
-          color: $white;
+          color: var(--primary);
           &::after {
             background-color: var(--secondary-color);
           }

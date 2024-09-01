@@ -136,7 +136,7 @@ li {
 [data-theme="dark"] {
   --bg-color: #090609;
   --text-color: #F1EAEF;
-  --primary: #976389;
+  --primary: #7A5070;
   --primary-bg: #251823;
   --secondary: #59533A;
   --secondary-bg: #191513;
@@ -393,7 +393,7 @@ img {
     transition: all 0.4s ease;
   }
   .header-menu-list__item a:hover {
-    color: #fff;
+    color: var(--primary);
   }
   .header-menu-list__item a:hover::after {
     background-color: var(--secondary-color);
@@ -618,7 +618,7 @@ img {
   position: relative;
   padding: 20px 10px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: var(--box-bg);
 }
 
 @media (min-width: 768px) {
