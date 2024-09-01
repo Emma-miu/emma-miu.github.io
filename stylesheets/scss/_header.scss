@@ -6,7 +6,7 @@
   position: relative;
   z-index: 99;
   width: 100%;
-  background-color: var(--text-color);
+  background-color: var(--border-color);
 
   &__name {
     @include abril;
@@ -38,7 +38,7 @@
     position: relative;
     width: 22px;
     height: 3px;
-    background: $white;
+    background: var(--bg-color);
 
     &::before {
       content: "";
@@ -76,11 +76,17 @@
       }
     }
   }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (min-width:$tb) {
   .header {
-    background-color: var(--text-color);
+    background-color: var(--border-color);
 
     &__name {
       padding-left: 0;
@@ -90,7 +96,7 @@
       padding: 15px;
     }
 
-    &__button {
+    &__content {
       display: none;
     }
   }
@@ -104,8 +110,42 @@
   }
 }
 
+.header-mode-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  font-size: 0;
+
+  &::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: var(--bg-color);
+    mask: url("/img/moon.svg") 50% 50% / contain no-repeat;
+    mask-size: cover;
+  }
+}
+
+@media (min-width:$tb) {
+  .header-mode-switch {
+    cursor: pointer;
+    transition: $trans;
+
+    &:hover {
+      background-color: var(--primary);
+    }
+  }
+}
+
 .header-menu {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   left: 0;
   width: 100%;
@@ -113,7 +153,7 @@
   padding: 30px;
   transition: $trans;
   border-top: 1px solid var(--bg-color);
-  background-color: var(--text-color);
+  background-color: var(--border-color);
 
   &.is-close {
     opacity: 0;
@@ -122,6 +162,7 @@
 
 @media (min-width: $tb) {
   .header-menu {
+    display: block;
     position: relative;
     left: unset;
     width: 100%;
@@ -137,6 +178,8 @@
 }
 
 .header-menu-list {
+  text-align: center;
+
   &__item {
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -159,7 +202,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 40px;
+    gap: 30px;
 
     &__item {
 

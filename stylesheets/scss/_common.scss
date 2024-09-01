@@ -28,6 +28,7 @@
 [data-theme="light"] {
   --bg-color: #F9F6F9;
   --text-color: #150E13;
+  --border-color: #150E13;
   --primary: #9C658E;
   --primary-bg: #F8F6F9;
   --secondary: #817658;
@@ -40,12 +41,62 @@
 [data-theme="dark"] {
   --bg-color: #090609;
   --text-color: #F1EAEF;
+  --border-color: #48422E;
   --primary: #7A5070;
   --primary-bg: #251823;
   --secondary: #59533A;
   --secondary-bg: #191513;
-  --outer: #522044;
+  --outer: #251823; //#3e1833;
   --box-bg: #080609;
+
+  // custom CSS for dark mode :
+  .header {
+    &__name {
+      color: var(--text-color);
+    }
+
+    &__icon {
+      background: var(--text-color);
+
+      &::before,
+      &::after {
+        background: var(--text-color);
+      }
+    }
+  }
+
+  .header-mode-switch {
+    &:hover {
+      background-color: var(--primary-bg);
+    }
+
+    &::after {
+      background-color: var(--text-color);
+      mask: url("/img/sun.svg") 50% 50% / contain no-repeat;
+    }
+  }
+
+  .header-menu {
+    border-top: 1px solid var(--text-color);
+
+    @media (min-width: $tb) {
+      border-top: 0;
+    }
+  }
+
+  .header-menu-list__item a {
+    color: var(--text-color);
+  }
+
+  .sns-box--footer .sns-box__item a,
+  .sns-box__item a {
+    background-color: var(--text-color);
+  }
+
+  .ly-box--contact {
+    background-color: #371f34;
+  }
+
 }
 
 * {
@@ -67,6 +118,8 @@ body {
   }
 }
 
+
+
 a {
   color: var(--text-color);
   text-decoration: none;
@@ -81,7 +134,7 @@ img {
 }
 
 .--tb {
-  display: block;
+  display: none;
 }
 
 .--pc {
@@ -91,7 +144,7 @@ img {
 .outer-container {
   margin: 16px;
   overflow: hidden;
-  border: 2px solid var(--text-color);
+  border: 2px solid var(--border-color);
 }
 
 .title {
@@ -123,6 +176,10 @@ img {
 
   .--sp {
     display: none;
+  }
+
+  .--tb {
+    display: block;
   }
 
   .outer-container {

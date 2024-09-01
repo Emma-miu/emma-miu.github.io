@@ -7,7 +7,7 @@
   height: calc(100vh - 62px - 16px);
   min-height: 654px;
   overflow: hidden;
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 2px solid var(--border-color);
   background-color: var(--bg-color);
 
   &__wrapper {

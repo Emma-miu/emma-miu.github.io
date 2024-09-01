@@ -7,7 +7,7 @@
   background-color: var(--box-bg);
 
   &:not(:last-of-type) {
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 2px solid var(--border-color);
   }
 
   &--secondary {
@@ -86,7 +86,7 @@
   .ly-content {
     padding: 50px;
     border-radius: 30px;
-    background-color: $white;
+    background-color: var(--box-bg);
   }
 }
 
@@ -345,7 +345,7 @@
     &__text {
       padding: 30px;
       border-radius: 30px;
-      background-color: $white;
+      background-color: var(--box-bg);
     }
 
     &__info {
