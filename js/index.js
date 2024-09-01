@@ -4,6 +4,7 @@ $(document).ready(function(){
   anchorLink();
   headerMenu();
   mvAnimation();
+  ga_link();
 });
 
 
@@ -113,4 +114,17 @@ function mvAnimation(){
 
 }
 
-
+//==========
+// Google Analytics
+//==========
+function ga_link() {
+  $('a').on('click', function(event) {
+    const linkTitle = $(this).attr('title');
+    const eventLabel = linkTitle ? linkTitle : $(this).text().trim();
+    
+    gtag('event', 'link_click', {
+      'event_category': 'engagement',
+      'event_label': eventLabel
+    });
+  });
+}
