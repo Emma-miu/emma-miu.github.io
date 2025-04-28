@@ -47,6 +47,10 @@
     display: block;
     opacity: 0;
     font-size: clamp(20px, 6vw, 50px);
+
+    span {
+      text-decoration: line-through;
+    }
   }
 
   &__button-box {
