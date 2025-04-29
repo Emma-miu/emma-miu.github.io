@@ -167,6 +167,10 @@
 
   &__list {
     margin-bottom: 20px;
+
+    &.--far {
+      margin-top: 20px;
+    }
   }
 
   &__item {
