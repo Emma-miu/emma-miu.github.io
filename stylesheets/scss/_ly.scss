@@ -388,7 +388,7 @@
     width: calc(100% + var(--padding) * 2);
     margin: 0 0 0 calc(var(--padding) * -1);
     padding: 30px var(--padding);
-    background-color: $white;
+    background-color: var(--box-bg);
 
     &:not(:last-of-type) {
       margin-bottom: 30px;
